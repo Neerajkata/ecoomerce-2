@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .featured-products {
+      background-color: #aaa;
+      width: 100%;
+      display: flex;
+      margin: 30px;
+      flex-wrap: wrap;
+      margin-left: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #aaa;
+      background-repeat: no-repeat;
+      background-size: 100vw;
+      ;
+      overflow-x: hidden;
+      flex-wrap: wrap;
+    }
+
+    p3 {
+      font-size: 20px;
+
+    }
+
+    p4 {
+      font-size: 20px;
+    }
+
+    p5 {
+      font-size: 20px;
+    }
+
+    .featured-product {
+      height: auto;
+      margin: 20px;
+      width: 15vw;
+      font-size: 10px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 35px;
+      background-color: beige;
+    }
+
+    .featured-product p3 {
+      height: 20vh;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .featured-product p4 {
+      height: 4vh;
+      margin: 5px;
+      text-align: center;
+
+    }
+
+    .featured-product p5 {
+      height: 4vh;
+      margin: 5px;
+      text-align: center;
+
+    }
+
+
+    .featured-product img {
+      width: 15vw;
+      height: 50vh;
+    }
+
+    .featured-product:hover {
+      transform: translateY(-5px);
+    }
+
+    .f-head {
+      height: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: black;
+      font-size: 25px;
+
+    }
+
+
+    .navbar {
+      height: 15vh;
+      margin-left: 5px;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: solid rebeccapurple;
+      margin: 0;
+      padding: 5px;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW1NQMbsvH6fd0rR_jo5LDh2yYGfka9CO0RFq_HeWJKsiyunbetHu-0ID5_w&s);
+      background-repeat: no-repeat;
+      background-size: 100vw;
+
+    }
+
+    IMG {
+      height: 160px;
+      width: 130px;
+    }
+
+    h1 {
+      margin-right: 200px;
+      padding-left: 2px;
+    }
+
+    .anchor:hover {
+
+      cursor: pointer;
+      color: orangered;
+    }
+
+    .anchor {
+      text-decoration: none;
+      padding: 5px;
+      color: blueviolet;
+    }
+
+    .product-banner {
+      width: 100%;
+      height: 130vh;
+    }
+
+    .featured-product button {
+      background-color: bisque;
+      cursor: pointer;
+      border-radius: 1rem;
+      height: 50px;
+      width: 10vw;
+      margin-top: 10px;
+      margin-left: 25px;
+      border: solid red 1px;
+    }
+
+    .featured-product button:hover {
+      background-color: red;
+      transition: 1s;
+    }
+
+
+
+
+    .footer {
+      display: flex;
+      background-color: #171717;
+      padding: 40px;
+      color: #aaa;
+      justify-content: space-between;
+    }
+
+    .footer-div {
+
+      margin: 30px;
+
+    }
+
+    .span {
+      color: green;
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="navbar">
+
+    <img src="./png-removebg-preview.png" alt="logo ">
+    <h1>SHOPIFY</h1>
+
+    <a class="anchor" href="./index.html">HOME</a>
+    <a class="anchor" href="./SHOP.html">SHOP</a>
+    <a class="anchor" href="./PRODUCTS.html">PRODUCTS</a>
+    <a class="anchor" href="#footer">ABOUT</a>
+    <a class="anchor" href="#footer">CONTACT</a>
+    <a class="anchor" href="./login.html">LOGIN</a>
+    <a href="./register.html"><i style=" font-size: 20px; padding-right: 20px;:hover{background-color: darkgoldenrod;}"
+        class="fa-solid fa-user"></i></a>
+    <a id="cartIcon" href="./cart.html"><i style=" font-size: 20px; margin-right: 20px; :hover{background-color: darkgoldenrod;} "
+        class="fa-solid fa-cart-plus"></i></a>
+  </div>
+
+
+  <section>
+    <div class="productbanner">
+      <img class="product-banner"
+        src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/about/a1.png?raw=true">
+    </div>
+  </section>
+
+  <section>
+    <div class="f-head">
+      <strong>FEATURED PRODUCTS</strong>
+    </div>
+    <div class="fetured-container"></div>
+    <div class="featured-products">
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg">
+        <p3>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</p3>
+        <p4> price: <span class="span">109.95</span></p4>
+        <p5>rating: <span class="span">3.6</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">159.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg">
+        <p3>Mens Cotton Jacket</p3>
+        <p4> price: <span class="span">309.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.5</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg">
+        <p3>Mens Casual Slim Fit</p3>
+        <p4> price: <span class="span">169.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg">
+        <p3>John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet</p3>
+        <p4> price: <span class="span">509.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">1.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg">
+        <p3>Solid Gold Petite Micropave</p3>
+        <p4> price: <span class="span">189.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg">
+        <p3>White Gold Plated Princess</p3>
+        <p4> price: <span class="span">309.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg">
+        <p3>Pierced Owl Rose Gold Plated Stainless Steel Double</p3>
+        <p4> price: <span class="span">149.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.5</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg">
+        <p3>WD 2TB Elements Portable External Hard Drive - USB 3.0</p3>
+        <p4> price: <span class="span">156.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.4</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg">
+        <p3>SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s</p3>
+        <p4> price: <span class="span">509.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.1</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg">
+        <p3>Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5</p3>
+        <p4> price: <span class="span">189.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg">
+        <p3>WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive</p3>
+        <p4> price: <span class="span">509.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg">
+        <p3>Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin</p3>
+        <p4> price: <span class="span">199.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">2.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg">
+        <p3>Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor </p3>
+        <p4> price: <span class="span">1089.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg">
+        <p3>BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats</p3>
+        <p4> price: <span class="span">1055.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">1.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg">
+        <p3>Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket</p3>
+        <p4> price: <span class="span">199.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.6</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg">
+        <p3>Rain Jacket Women Windbreaker Striped Climbing Raincoats</p3>
+        <p4> price: <span class="span">725.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.4</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg">
+        <p3>MBJ Women's Solid Short Sleeve Boat Neck V </p3>
+        <p4> price: <span class="span">156.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">3.5</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg">
+        <p3>Opna Women's Short Sleeve Moisture</p3>
+        <p4> price: <span class="span">709.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg">
+        <p3>DANVOUY Womens T Shirt Casual Cotton Short</p3>
+        <p4> price: <span class="span">509.95</span></p4>
+        </p4>
+        <p5>rating: <span class="span">2.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+    </div>
+    <section>
+      <footer class="footer" id="footer">
+        <div class="footer-div">
+          <strong>CATEGORIES</strong>
+          <ul>
+            <li>WOMENS FASHION</li>
+            <li>MENS ACCESSORIES</li>
+            <li>WOMENS ACCESSORIES</li>
+            <li>WOMENS FASHION BRANDS</li>
+            <li>MENS FASHION BRANDS</li>
+            <li>ALL BRANDS</li>
+
+          </ul>
+        </div>
+        <DIV class="footer-div">
+          <strong>CUSTOMER SERVICES</strong>
+          <UL>
+            <li>ABOUT US</li>
+            <li>SPECIALS</li>
+            <li>NEW PRODUCTS</li>
+            <li>ALL PRODUCTS</li>
+            <li>FAQ</li>
+          </UL>
+        </DIV>
+
+        <DIV class="footer-div">
+          <strong>INFORMATION</strong>
+          <UL>
+            <li>SHIPPING INFO</li>
+            <li>PRIVACY POLICY</li>
+            <li>CONDITIONS OF USE</li>
+            <li>SITE MAP</li>
+            <li>CONTACT US</li>
+          </UL>
+        </DIV>
+
+        <DIV class="footer-div">
+          <strong>CONTACT US</strong>
+          <UL>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, voluptatem.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>+919393965999</li>
+            <li>KATANEERAJ@GMAIL.COM</li>
+            <li>FAQ</li>
+          </UL>
+        </DIV>
+      </footer>
+    </section>
+
+
+
+
+</body>
+
+</html>

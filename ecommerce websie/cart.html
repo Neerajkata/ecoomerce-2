@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: blueviolet;
+    }
+
+    
+
+     .cart-container {
+      display: flex;
+      flex-direction: column;
+      width: 15vw;
+      font-size: 10px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      margin: 20px;
+      padding: 35px;
+      background-color: beige;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <h1>
+          <li><a href="#" id="backToProducts">Back to Products</a></li>
+        </h1>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="cart-container">
+    
+      
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cartItemsContainer = document.querySelector(".cart-container");
+
+
+      
+      // Retrieve product details from local storage
+      const productName = localStorage.getItem("productName");
+      const productRate = localStorage.getItem("productRate");
+      const productRating = localStorage.getItem("productRating");
+
+      
+      // Display product details on cart page
+      const productItem = document.createElement("div");
+     
+      productItem.innerHTML = 
+     
+      `
+      <p3>${productName}</p3>
+      <button>buy</button>
+      `;
+      cartItemsContainer.appendChild(productItem);
+
+      // Function to handle click on "Back to Products" link
+      document.getElementById("backToProducts").addEventListener("click", function () {
+        // Redirect to products page
+        window.location.href = "index.html";
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
+

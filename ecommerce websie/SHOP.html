@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .featured-products {
+      background-color: #aaa;
+      width: 100%;
+      display: flex;
+      margin: 30px;
+      flex-wrap: wrap;
+      margin-left: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #aaa;
+      background-repeat: no-repeat;
+      background-size: 100vw;
+      ;
+      overflow-x: hidden;
+      flex-wrap: wrap;
+    }
+
+    p3 {
+      font-size: 20px;
+
+    }
+
+    p4 {
+      font-size: 20px;
+    }
+
+    p5 {
+      font-size: 20px;
+    }
+
+    .featured-product {
+      display: flex;
+      flex-direction: column;
+      width: 15vw;
+      font-size: 10px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      margin: 20px;
+      padding: 35px;
+      background-color: beige;
+    }
+
+    .featured-product button {
+      background-color: bisque;
+      cursor: pointer;
+      border-radius: 1rem;
+      height: 50px;
+      width: 10vw;
+      margin-top: 10px;
+      margin-left: 25px;
+      border: solid red 1px;
+    }
+
+    .featured-product button:hover {
+      background-color: red;
+      transition: 1s;
+    }
+
+    .featured-product p3 {
+      height: 20vh;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .featured-product p4 {
+      height: 4vh;
+      margin: 5px;
+      text-align: center;
+
+    }
+
+    .featured-product p5 {
+      height: 4vh;
+      margin: 5px;
+      text-align: center;
+
+    }
+
+
+
+    .featured-product img {
+      width: 15vw;
+      height: 50vh;
+    }
+
+    .featured-product:hover {
+      transform: translateY(-5px);
+    }
+
+    .f-head {
+      height: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: black;
+      font-size: 25px;
+    }
+
+    .navbar {
+      height: 15vh;
+      margin-left: 5px;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: solid rebeccapurple;
+      margin: 0;
+      padding: 5px;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW1NQMbsvH6fd0rR_jo5LDh2yYGfka9CO0RFq_HeWJKsiyunbetHu-0ID5_w&s);
+      background-repeat: no-repeat;
+      background-size: 100vw;
+
+
+    }
+
+    IMG {
+      height: 160px;
+      width: 130px;
+    }
+
+    h1 {
+      margin-right: 200px;
+      padding-left: 2px;
+    }
+
+    .anchor:hover {
+
+      cursor: pointer;
+      color: orangered
+    }
+
+
+    .anchor {
+      text-decoration: none;
+      padding: 5px;
+      color: blueviolet;
+    }
+
+    .banner-container {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      padding: 0;
+    }
+
+    .img1 {
+      height: 50vh;
+      width: 30vw;
+    }
+
+    .img2 {
+      height: 50vh;
+      width: 70vw;
+    }
+
+    .footer {
+      display: flex;
+      background-color: #171717;
+      padding: 40px;
+      color: #aaa;
+      justify-content: space-between;
+    }
+
+    .footer-div {
+
+      margin: 30px;
+
+    }
+
+    .span {
+      color: green;
+    }
+
+    .icon-cart {
+      display: inline;
+      margin: 2px;
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div class="navbar">
+
+    <img src="./png-removebg-preview.png" alt="logo ">
+    <h1>SHOPIFY</h1>
+
+    <a class="anchor" href="./index.html">HOME</a>
+    <a class="anchor" href="./SHOP.html">SHOP</a>
+    <a class="anchor" href="./PRODUCTS.html">PRODUCTS</a>
+    <a class="anchor" href="#footer">ABOUT</a>
+    <a class="anchor" href="#footer">CONTACT</a>
+    <a class="anchor" href="./login.html">LOGIN</a>
+    <a href="./register.html"><i style=" font-size: 20px; padding-right: 20px;:hover{background-color: darkgoldenrod;}"
+        class="fa-solid fa-user"></i></a>
+    <a id="cartIcon" href="./cart.html"><i style=" font-size: 20px; margin-right: 20px; :hover{background-color: darkgoldenrod;} "
+        class="fa-solid fa-cart-plus"></i></a>
+  </div>
+
+
+
+
+  <section class="banner-container">
+    <div class="banner">
+      <img class="img1"
+        src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/banner/b10.jpg?raw=true">
+    </div>
+    <div class="banner">
+      <img class="img2"
+        src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/banner/b1.jpg?raw=true">
+    </div>
+  </section>
+
+
+  <section>
+    <div class="f-head">
+      <strong>SHOP HERE</strong>
+    </div>
+    <div class="fetured-container"></div>
+    <div class="featured-products">
+
+      <div class="featured-product">
+        <img src="./f1.jpg">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">3.5</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img src="./f2.jpg">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">3.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/f3.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">725.95</span></p4>
+        <p5>rating: <span class="span">2.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/f4.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">525.95</span></p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/f5.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">925.95</span></p4>
+        <p5>rating: <span class="span">1.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/f6.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">585.95</span></p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/f7.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">565.95</span></p4>
+        <p5>rating: <span class="span">3.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/f8.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">855.95</span></p4>
+        <p5>rating: <span class="span">2.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n1.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">825.95</span></p4>
+        <p5>rating: <span class="span">1.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n2.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">725.95</span></p4>
+        <p5>rating: <span class="span">3.7</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n3.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">565.95</span></p4>
+        <p5>rating: <span class="span">3.94</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n4.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">3.6</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n5.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">365.95</span></p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n6.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">3.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n7.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">2.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n8.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">1.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="./f1.jpg">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">3.98</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n8.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">3.5</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img src="./f1.jpg">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">4.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="featured-product">
+        <img
+          src="https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/products/n8.jpg?raw=true">
+        <p3>Mens Casual Premium Slim Fit Shirt</p3>
+        <p4> price: <span class="span">595.95</span></p4>
+        <p5>rating: <span class="span">3.9</span></p5>
+        </p5>
+        <div class="icon-cart">
+          <button>BUY NOW</button>
+          <a> <i id="cart-btn" style=" font-size: 20px;" class="fa-solid fa-cart-plus"></i></a>
+        </div>
+      </div>
+
+      <section>
+        <footer class="footer" id="footer">
+          <div class="footer-div">
+            <strong>CATEGORIES</strong>
+            <ul>
+              <li>WOMENS FASHION</li>
+              <li>MENS ACCESSORIES</li>
+              <li>WOMENS ACCESSORIES</li>
+              <li>WOMENS FASHION BRANDS</li>
+              <li>MENS FASHION BRANDS</li>
+              <li>ALL BRANDS</li>
+
+            </ul>
+          </div>
+          <DIV class="footer-div">
+            <strong>CUSTOMER SERVICES</strong>
+            <UL>
+              <li>ABOUT US</li>
+              <li>SPECIALS</li>
+              <li>NEW PRODUCTS</li>
+              <li>ALL PRODUCTS</li>
+              <li>FAQ</li>
+            </UL>
+          </DIV>
+
+          <DIV class="footer-div">
+            <strong>INFORMATION</strong>
+            <UL>
+              <li>SHIPPING INFO</li>
+              <li>PRIVACY POLICY</li>
+              <li>CONDITIONS OF USE</li>
+              <li>SITE MAP</li>
+              <li>CONTACT US</li>
+            </UL>
+          </DIV>
+
+          <DIV class="footer-div">
+            <strong>CONTACT US</strong>
+            <UL>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, voluptatem.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>+919393965999</li>
+              <li>KATANEERAJ@GMAIL.COM</li>
+              <li>FAQ</li>
+            </UL>
+          </DIV>
+        </footer>
+      </section>
+
+
+</body>
+
+</html>
